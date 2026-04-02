@@ -1,6 +1,6 @@
 # Anotações sobre privacidade diferencial
 
-<img src="image.jpeg" width=50%>  
+<img src="image.jpeg" width=30%>  
 
 ## Privacidade 
 
