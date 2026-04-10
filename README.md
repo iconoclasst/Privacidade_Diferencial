@@ -1,6 +1,5 @@
 # Anotações sobre privacidade diferencial  
 
-<img src="teste.jpeg" width=50%>  
 
 
 ## Privacidade  
