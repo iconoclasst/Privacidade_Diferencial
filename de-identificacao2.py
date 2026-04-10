@@ -18,8 +18,13 @@ dados1 = [
 
 n = len(dados1[0]["telefone"])
 
-for d1 in dados1:
-    for i in range(n -1, -1, -1):
-        if i < n - 2:
-            d1["telefone"][i] = '*'
+newstring=''
 
+for d1 in dados1:
+    for i in range(n -1, -2, -1): 
+        if i >= n - 2:
+            newstring += d1["telefone"][i]
+        else:
+            newstring += '*'
+
+print(newstring)
