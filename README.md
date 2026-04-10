@@ -1,6 +1,6 @@
 # Anotações sobre privacidade diferencial  
 
-
+![t](imagem.jpeg)  
 
 ## Privacidade  
 
