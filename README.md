@@ -2,6 +2,10 @@
 
 <img src="teste.png" width=30%>  
 
+<img src="~/teste.png" width=30%>  
+
+
+
 ## Privacidade  
 
 Privacidade de dados é diferente de segurança de dados. Técnicas de privacidade de dados permitem aprendizado e uso dos dados sem revelar informações sensíveis. Enquanto Segurança de dados evita acesso e exposição, então não podemos usá-los. 
