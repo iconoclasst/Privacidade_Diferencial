@@ -1,6 +1,7 @@
 # Anotações sobre privacidade diferencial  
 
-![t](imagem.jpeg)  
+![teste](images/imagem.jpeg)  
+
 
 ## Privacidade  
 
