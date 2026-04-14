@@ -14,7 +14,9 @@ dados = [
     [2, 34, "F", "SP", 7000, 800, 10, 1.8, "Sim", 0],
     [3, 29, "M", "RJ", 4500, 650, 3, 3.2, "Não", 1],
     [4, 41, "F", "BH", 9000, 820, 15, 2.0, "Sim", 0],
-    [5, 22, "M", "POA", 2000, 600, 1, 4.0, "Não", 1]
+    [5, 22, "M", "POA", 2000, 600, 1, 4.0, "Não", 1],
+    [5, 22, "M", "POA", 2500, 600, 1, 4.0, "Não", 1],
+    [5, 23, "M", "POA", 2800, 800, 3, 3.0, "Sim", 1]
 ]
 
 colunas = [
@@ -69,8 +71,74 @@ def isKanonymous(qi, k):
   for i in contagem:
     if i < k:
       return False
-    return True
+  return True
 
-r = isKanonymous(qi, 2)
+r = isKanonymous(qi, 1)
 print(r)
+
+"""Liste todas as combinações de QI que aparecem apenas 1 vez."""
+
+j1 = qi.groupby(['idade', 'genero', 'cidade']).size() == 1
+
+print(list(j1[j1].index))
+
+"""Aplique generalização:
+
+idade -> faixas (ex: 20–29, 30–39)  
+cidade -> manter  
+genero -> manter  
+
+Reavalie: O dataset virou 2-anônimo?  
+"""
+
+qi_copy = qi.copy()
+
+faixas = ['20-29', '30-39', '40-49']
+
+for i in qi_copy['idade']:
+  if i < 30:
+    qi_copy['idade'] = qi_copy['idade'].replace(i, faixas[0])
+  elif i < 40:
+    qi_copy['idade'] = qi_copy['idade'].replace(i, faixas[1])
+  else:
+    qi_copy['idade'] = qi_copy['idade'].replace(i, faixas[2])
+
+print('Antes')
+print(qi)
+print('Depois')
+print(qi_copy)
+
+isKanonymous(qi_copy, 2)
+
+"""Aumente a generalização:  
+
+idade → faixas maiores (ex: 20–40)  
+cidade → região (ex: Sudeste, Sul)  
+
+Pergunta: Agora atende k=2?  
+"""
+
+qi_copy2 = qi.copy()
+qi_copy
+
+faixas2 = ['20-39', '40-59']
+regioes = ['Sudeste', 'Sul']
+
+for i in qi_copy2['idade']:
+  if i < 40:
+    qi_copy2['idade'] = qi_copy2['idade'].replace(i, faixas2[0])
+  else:
+    qi_copy2['idade'] = qi_copy2['idade'].replace(i, faixas2[1])
+
+for j in qi_copy2['cidade']:
+  if j == 'BH' or j == 'RJ' or j == 'SP':
+    qi_copy2['cidade'] = qi_copy2['cidade'].replace(j, regioes[0])
+  else:
+        qi_copy2['cidade'] = qi_copy2['cidade'].replace(j, regioes[1])
+
+print(isKanonymous(qi_copy2, 1))
+
+j2 = qi_copy2.groupby(['idade', 'genero', 'cidade']).size()
+
+j2.index
 
