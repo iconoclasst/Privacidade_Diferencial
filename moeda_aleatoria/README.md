@@ -14,4 +14,4 @@ Essa fórmula diz a quantidade esperada de respostas **sim**, em que a primeira 
 Para uma pessoa que tem "não" como resposta verdadeira, ela só pode dizer "sim" na ocasião de tirar coroa e cara seguidos (probabilidade de $`\frac{1}{4}`$).
 
 
-<img src="../images/moeda.png" width=50%>  
+<img src="../images/moeda.jpg" width=50%>
