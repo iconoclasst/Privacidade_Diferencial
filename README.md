@@ -10,12 +10,6 @@ Para identificar indivíduos em um conjunto de dados, as colunas de informaçõe
 > Quasidentificadores: Informações que podem ser combinadas para fazer ligações e identificar indivíduos.  
 
 
-### Técnicas  
-- De-identificação: O mesmo que anonimização. Se baseia em avaliar o conjunto de dados e retirar as informações que identifiquem indivíduos diretamente (PII).  
-
-- K-Anonimato: 
-
-
 
 
 
