@@ -11,7 +11,9 @@ Para identificar indivíduos em um conjunto de dados, as colunas de informaçõe
 > PII: Informações usadas para identificar diretamente um indivíduo  
 > Quasidentificadores: Informações que podem ser combinadas para fazer ligações e identificar indivíduos.  
 
+## Sensibilidade global  
 
+Sensibilidade global é um conceito necessário para entender a aplicação de ruído em privacidade diferencial. Tendo um universo de dados U, diversos subconjuntos (conjuntos de dados) formados por elementos de U podem ser formados, por exemplo, $D1 \subset U$, $D2 \subset U$, ..., $Dn \subset U$. Se pensarmos em um dataset com as colunas idade, peso, altura, U = idade x peso x altura. Cada componente de U, como idade, tem uma quantidade específica de valores, por exemplo, idade é considerada de 0 até 100 normalmente.  
 
 
 
