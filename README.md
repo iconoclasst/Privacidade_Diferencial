@@ -19,3 +19,5 @@ Para identificar indivíduos em um conjunto de dados, as colunas de informaçõe
 
 
 
+
+
