@@ -14,8 +14,7 @@ Para identificar indivíduos em um conjunto de dados, as colunas de informaçõe
 ## Sensibilidade global  
 
 Sensibilidade global é um conceito necessário para entender a aplicação de ruído em privacidade diferencial. Tendo um universo de dados U, diversos subconjuntos (conjuntos de dados) formados por elementos de U podem ser formados, por exemplo, $D1 \subset U$, $D2 \subset U$, ..., $Dn \subset U$. Se pensarmos em um dataset com as colunas idade, peso, altura, U = idade x peso x altura. Cada componente de U, como idade, tem uma quantidade específica de valores, por exemplo, idade é considerada de 0 até 100 normalmente. A privacidade diferencial garante que a ausência ou presença de um indivíduo em um conjunto de dados não altere significativamente a análise de dados. Para isso é importante definir conjuntos vizinhos: Cada conjunto D é formado por indivíduos com as características de U, e com essa definição conseguimos formar $D$ e $D´$, datasets vizinhos. $D$ é vizinho (ou adjacente) de $D'$ se por adição ou alteração, eles forem diferentes.  
-Por adição: $D ~ D'$ se $|D \delta D| = 1'. Em outras palavras, se a diferença simétrica (ausência ou presença de um indivíduo) for = 1.
-
+**Por adição:** \(D \slim D'\) se \(|D \triangule D'| = 1')\. Em outras palavras, se a diferença simétrica (ausência ou presença de um indivíduo) for = 1.
 
 
 
