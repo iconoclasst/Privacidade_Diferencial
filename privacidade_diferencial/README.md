@@ -1,4 +1,4 @@
-### Atingindo a definição para "amostra_media_com_ruido_laplaciano"
+<!-- ### Atingindo a definição para "amostra_media_com_ruido_laplaciano"
 
 $D = [10,12,11,13,12,10]$ e $D' =$ $D$ menos um elemento.
 
@@ -90,4 +90,66 @@ Portanto:
 
 $$\Pr[M(D)\in S] \le e^\varepsilon \Pr[M(D')\in S]$$
 
-para qualquer conjunto $S$.
+para qualquer conjunto $S$. -->
+
+Seja:
+
+$$
+D = [10,12,11,13,12,10]
+$$
+
+e seja $D'$ o conjunto $D$ menos um elemento.
+
+Considere:
+
+$$
+U = [0,20]
+$$
+
+A função média é:
+
+$$
+f(D)=\frac{\sum D}{|D|}
+$$
+
+Logo:
+
+$$
+f(D)=\frac{10+12+11+13+12+10}{6}
+=\frac{68}{6}
+\approx 11.33
+$$
+
+A sensibilidade global é:
+
+$$
+\Delta f = \max_{D,D'} |f(D)-f(D')|
+$$
+
+Para $|D|=6$ e $U=[0,20]$:
+
+$$
+\Delta f=\frac{20-0}{6}
+=\frac{20}{6}
+=\frac{10}{3}
+\approx 3.33
+$$
+
+O mecanismo Laplaciano é:
+
+$$
+M(D)=f(D)+\text{Lap}(0,b)
+$$
+
+onde:
+
+$$
+b=\frac{\Delta f}{\varepsilon}
+$$
+
+Como $\varepsilon=1$:
+
+$$
+b=\frac{10/3}{1}
+=\frac{10}{3}
+$$
